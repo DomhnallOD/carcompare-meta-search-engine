@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
 
+## Purpose
+
+A meta-search engine which aggregates diverse market data, so that market offerings may be viewed and compared through a single consumer web portal. This web application is supported by API-led connectivity which integrates multiple networked applications.
+
+Core components:
+Angular 7 front-end application
+MuleSoft API network
+Multiple diverse database systems, including MongoDB and SQL
+Python web-scraping application (external - separate on GitHub)
+
+Undertaken in industrial partnership with Sogeti Ireland.
+
+Appraisal: 85%
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
