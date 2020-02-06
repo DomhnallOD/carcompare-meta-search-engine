@@ -1,0 +1,5 @@
+<form [formGroup]="sliderForm">
+  <p></p>
+  <label for="yearFilter">Year: </label>
+  <ng5-slider id="yearFilter" (click)="updateValue()" [options]="options" formControlName="sliderControl"></ng5-slider>
+</form>

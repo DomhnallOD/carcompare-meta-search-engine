@@ -1,0 +1,5 @@
+<form [formGroup]="sliderForm">
+  <p></p>
+  <label for="engineSizeFilter">Engine Size: </label>
+  <ng5-slider id="engineSizeFilter" (click)="updateValue()" [options]="options" formControlName="sliderControl"></ng5-slider>
+</form>

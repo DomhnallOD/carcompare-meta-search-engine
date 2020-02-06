@@ -1,0 +1,9 @@
+<div>
+	<app-model-filter (models)="modelsHandler($event)"></app-model-filter>
+	<app-price-filter (minPrice)="minPriceHandler($event)" (maxPrice)="maxPriceHandler($event)"></app-price-filter>
+	<app-year-filter (minYear)="minYearHandler($event)" (maxYear)="maxYearHandler($event)"></app-year-filter>
+	<app-mileage-filter (minKm)="minKmHandler($event)" (maxKm)="maxKmHandler($event)"></app-mileage-filter>
+	<app-engine-size-filter (minEngineSize)="minEngineSizeHandler($event)" (maxEngineSize)="maxEngineSizeHandler($event)"></app-engine-size-filter>
+	<button class="search" (click)="search()">Search</button>
+</div>
+

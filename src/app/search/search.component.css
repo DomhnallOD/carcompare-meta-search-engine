@@ -1,0 +1,9 @@
+.filter {
+	width: 22%;
+	float:left;
+}
+
+.container{
+	float:right;
+	width: 78%;
+}

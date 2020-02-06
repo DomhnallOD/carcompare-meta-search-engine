@@ -1,0 +1,5 @@
+<form [formGroup]="sliderForm">
+    <p></p>
+    <label for="mileageFilter">Mileage: </label>
+    <ng5-slider id="mileageFilter" (click)="updateValue()" [options]="options" formControlName="sliderControl"></ng5-slider>
+</form>

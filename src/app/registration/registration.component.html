@@ -1,0 +1,241 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-3"></div>
+        <div class="col-md-6">
+            <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && register()" novalidate class="register-form">
+            <!-- First Name -->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text"
+                            id="first_name"
+                            class="form-control"
+                            name="first_name"
+                            placeholder="Your first name"
+                            [(ngModel)]="model.first_name"
+                            #first_name="ngModel"
+                            [ngClass]="{ 'is-invalid': f.submitted && first_name.invalid }"
+                            required/>
+                            <!-- input validation group -->
+                            <div *ngIf="f.submitted && first_name.invalid" class="invalid-input">
+                                <!-- individual validation errors -->
+                                <div *ngIf="first_name.errors?.required">Field is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Last Name -->
+                    <div class="col ml-auto">
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text"
+                            id="last_name"
+                            class="form-control"
+                            name="last_name"
+                            placeholder="Your Last name"
+                            [(ngModel)]="model.last_name"
+                            #last_name="ngModel"
+                            [ngClass]="{ 'is-invalid': f.submitted && last_name.invalid }"
+                            required/>
+                            <!-- input validation group -->
+                            <div *ngIf="f.submitted && last_name.invalid" class="invalid-input">
+                                <!-- individual validation errors -->
+                                <div *ngIf="last_name.errors?.required">Field is required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date"
+                id="dob"
+                class="form-control"
+                name="dob"
+                [(ngModel)]="model.dob"
+                #dob="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && dob.invalid }"
+                required/>
+                <!-- input validation group -->
+                <div *ngIf="f.submitted && dob.invalid" class="invalid-input">
+                    <!-- individual validation errors -->
+                    <div *ngIf="dob.errors?.required">Field is required</div>
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text"
+                id="email"
+                class="form-control"
+                name="email"
+                placeholder="Your Email"
+                [(ngModel)]="model.email"
+                #email="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                required email/>
+                <!-- input validation group -->
+                <div *ngIf="f.submitted && email.invalid" class="invalid-input">
+                    <!-- individual validation errors -->
+                    <div *ngIf="email.errors?.required">Field is required</div>
+                    <div *ngIf="email.errors?.email">Field is not a valid email</div>
+                </div>
+            </div>
+            <!-- Eircode -->
+            <div class="form-group">
+                <label for="address_eircode">Eircode</label>
+                <input type="text"
+                id="address_eircode"
+                class="form-control"
+                name="address_eircode"
+                placeholder="Your Eircode"
+                [(ngModel)]="model.address_eircode"
+                #address_eircode="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && address_eircode.invalid }"
+                required/>
+                <!-- input validation group -->
+                <div *ngIf="f.submitted && address_eircode.invalid" class="invalid-input">
+                    <!-- individual validation errors -->
+                    <div *ngIf="address_eircode.errors?.required">Field is required</div>
+                </div>
+            </div>
+            <!-- Address Line 1 -->
+            <div class="form-group">
+                <label for="address_line_1">Address Line 1</label>
+                <input type="text"
+                id="address_line_1"
+                class="form-control"
+                name="address_line_1"
+                placeholder="First Line of Address"
+                [(ngModel)]="model.address_line_1"
+                #address_line_1="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && address_line_1.invalid }"
+                required/>
+                <!-- input validation group -->
+                <div *ngIf="f.submitted && address_line_1.invalid" class="invalid-input">
+                    <!-- individual validation errors -->
+                    <div *ngIf="address_line_1.errors?.required">Field is required</div>
+                </div>
+            </div>
+            <!-- Address Line 2 -->
+            <div class="form-group">
+                <label for="address_line_2">Address Line 2</label>
+                <input type="text"
+                id="address_line_2"
+                class="form-control"
+                name="address_line_2"
+                placeholder="Second Line of Address"
+                [(ngModel)]="model.address_line_2"
+                #address_line_2="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && address_line_2.invalid }"
+                required/>
+                <!-- input validation group -->
+                <div *ngIf="f.submitted && address_line_2.invalid" class="invalid-input">
+                    <!-- individual validation errors -->
+                    <div *ngIf="address_line_2.errors?.required">Field is required</div>
+                </div>
+            </div>
+            <!-- Address Town -->
+            <div class="form-group">
+                <label for="address_town">Address Town</label>
+                <input type="text"
+                id="address_town"
+                class="form-control"
+                name="address_town"
+                placeholder="Town"
+                [(ngModel)]="model.address_town"
+                #address_town="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && address_town.invalid }"
+                required/>
+                <!-- input validation group -->
+                <div *ngIf="f.submitted && address_town.invalid" class="invalid-input">
+                    <!-- individual validation errors -->
+                    <div *ngIf="address_town.errors?.required">Field is required</div>
+                </div>
+            </div>
+            <!-- Address County -->
+            <div class="form-group">
+                <label for="address_county">Address County</label>
+                <select type="select"
+                id="address_county"
+                class="form-control"
+                name="address_county"
+                placeholder="County"
+                [(ngModel)]="model.address_county"
+                #address_county="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && address_county.invalid }"
+                required>
+                <option value="" disabled>Select County</option>
+                <option value="antrim">Antrim</option>
+                <option value="armagh">Armagh</option>
+                <option value="carlow">Carlow</option>
+                <option value="cavan">Cavan</option>
+                <option value="clare">Clare</option>
+                <option value="cork">Cork</option>
+                <option value="derry">Derry</option>
+                <option value="donegal">Donegal</option>
+                <option value="down">Down</option>
+                <option value="dublin">Dublin</option>
+                <option value="fermanagh">Fermanagh</option>
+                <option value="galway">Galway</option>
+                <option value="kerry">Kerry</option>
+                <option value="kildare">Kildare</option>
+                <option value="kilkenny">Kilkenny</option>
+                <option value="laois">Laois</option>
+                <option value="leitrim">Leitrim</option>
+                <option value="limerick">Limerick</option>
+                <option value="longford">Longford</option>
+                <option value="louth">Louth</option>
+                <option value="mary">Mayo</option>
+                <option value="meath">Meath</option>
+                <option value="monaghan">Monaghan</option>
+                <option value="offaly">Offaly</option>
+                <option value="roscommon">Roscommon</option>
+                <option value="sligo">Sligo</option>
+                <option value="tipperary">Tipperary</option>
+                <option value="tyrone">Tyrone</option>
+                <option value="waterford">Waterford</option>
+                <option value="westmeath">Westmeath</option>
+                <option value="wexford">Wexford</option>
+                <option value="wicklow">Wicklow</option>
+                </select>
+                <div *ngIf="f.submitted && address_county.invalid" class="invalid-input">
+                    <!-- individual validation errors -->
+                    <div *ngIf="address_county.errors?.required">Field is required</div>
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="user_password">Password</label>
+                <input type="password"
+                id="user_password"
+                class="form-control"
+                name="user_password"
+                placeholder="Enter password"
+                [(ngModel)]="model.user_password"
+                #user_password="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && user_password.invalid }"
+                required/>
+                <!-- input validation group -->
+                <div *ngIf="f.submitted && user_password.invalid" class="invalid-input">
+                    <!-- individual validation errors -->
+                    <div *ngIf="user_password.errors?.required">Field is required</div>
+                </div>
+            </div>
+            <div class="container signin">
+                <p>
+                    Already have an account? <a href="#">Sign in</a>
+                    <!-- Register Button -->
+                    <button type="submit" class="btn btn-info pull-right">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    <span> Register</span>
+                    </button>
+                </p>
+            </div>
+            </form>
+        </div>
+        <div class="offset-3"></div>
+    </div>
+</div>

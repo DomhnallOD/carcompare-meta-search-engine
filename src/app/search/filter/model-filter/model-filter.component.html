@@ -1,0 +1,20 @@
+<form [formGroup]="myForm" novalidate>
+<div class="row">
+	<div class="col-lg-10">
+		<ng-multiselect-dropdown
+				name="make"
+				[placeholder]="'Select Make'"
+				[data]="makes"
+				formControlName="make"
+				[disabled]="disabled"
+				[settings]="dropdownSettings"
+				(onSelect)="onItemSelect($event)"
+				(onDeSelect)="onItemDeSelect($event)"
+				(onSelectAll)="onSelectAll($event)"
+				(onDeSelectAll)="onDeSelectAll($event)"
+				(click)="updateValue()"
+				>
+			</ng-multiselect-dropdown>
+	</div>
+</div>	
+</form>
